@@ -1,0 +1,391 @@
+/* Smooth transitions for movie posters */
+.poster-img {
+    width: 100%;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Added smooth transition */
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.poster-img:hover {
+    transform: scale(1.1) translateY(-8px); /* Slightly bigger & lifted */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6); /* Glow effect */
+}
+
+/* Animate Book Now button when hovered */
+.btn-book {
+    background: linear-gradient(45deg, #ef4444, #7f1d1d);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-book:hover {
+    transform: scale(1.05); /* Button grows slightly */
+    background: linear-gradient(45deg, #7f1d1d, #ef4444);
+}
+body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #000;
+            padding: 16px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            font-size: 36px;
+            color: #ef4444;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        nav button {
+            background: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: color 0.3s;
+        }
+
+        nav button:hover {
+            color: #ef4444;
+        }
+
+        .btn-signup {
+            background-color: #ef4444;
+            color: rgb(219, 158, 158);
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .btn-signup:hover {
+            background-color: #dc2626;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 64px 0;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(to right, rgba(189, 122, 122, 0.8), rgba(255,0,0,0.1));
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://placehold.co/1920x1080/000000/ffffff?text=Cinema+Lights');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .hero-section h2 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ef4444;
+            margin-bottom: 16px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .hero-section p {
+            font-size: 24px;
+            color: #deb2a6;
+            margin-bottom: 32px;
+        }
+
+        .location-selector {
+            margin-bottom: 32px;
+        }
+
+        .location-selector label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .location-selector select {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+            display: block;
+            padding: 8px;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #000000;
+        }
+
+        .location-selector select:focus {
+            outline: none;
+            border-color: #ef4444;
+        }
+
+        /* Movies Section */
+        .movies-section {
+            padding: 64px 0;
+        }
+
+        .movies-section h3 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 48px;
+            color: #f87171;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .movie-card {
+            text-align: center;
+        }
+
+        .poster-img {
+            width: 100%;
+            height: 256px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            margin-bottom: 16px;
+        }
+
+        .poster-img:hover {
+            transform: scale(1.05);
+        }
+
+        .movie-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .btn-book {
+            background: linear-gradient(45deg, #ef4444, #7f1d1d);
+            border: none;
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .btn-book:hover {
+            background: linear-gradient(45deg, #7f1d1d, #ef4444);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 64px 0;
+            background-color: #374151;
+            text-align: center;
+        }
+
+        .about-section h3 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 32px;
+            color: #f87171;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+        /* Contact and Feedback Section */
+        .contact-feedback-section {
+            padding: 64px 0;
+        }
+
+        .contact-feedback-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .contact-card, .feedback-card {
+            background-color: #374151;
+            padding: 32px;
+            border-radius: 8px;
+        }
+
+        .contact-card h3, .feedback-card h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #f87171;
+        }
+
+        .contact-card p {
+            margin-bottom: 8px;
+        }
+
+        .feedback-form input, .feedback-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+        }
+
+        .feedback-form input:focus, .feedback-form textarea:focus {
+            outline: none;
+            border-color: #ef4444;
+        }
+
+        .btn-submit {
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 32px 0;
+            text-align: center;
+        }
+
+        /* Modals */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .form-container {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 32px;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(255,255,255,0.1);
+        }
+
+        .form-container h2 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .signin-form, .signup-form {
+            margin-bottom: 24px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries */
+        @media (min-width: 768px) {
+            .movie-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-feedback-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-section h2 {
+                font-size: 72px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .movie-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
